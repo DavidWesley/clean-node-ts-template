@@ -1,2 +1,2 @@
-# node-config-template
-Inicializar um repositório com todas as configurações necessárias
+# ts-node-config-template
+Inicializar um repositório Typescript com todas as configurações necessárias
