@@ -4,8 +4,24 @@
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    labels:
+      - "dependencies"
+    target-branch: "dev"
+    groups:
+      dev-dependencies:
+        patterns:
+        - "*"
+        update-types:
+        - "minor"
+        - "patch"
+    ignore:
+      - dependency-name: "prettier*"
+        # For Prettier, ignore all updates for minor and patch versions
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
+    open-pull-requests-limit: 5
