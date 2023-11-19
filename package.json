@@ -1,11 +1,13 @@
 {
-  "name": "config-template",
-  "version": "0.0.1",
-  "description": "Inicializar um repositório com todas as configurações necessárias",
+  "name": "ts-config-template",
+  "version": "0.0.2",
+  "description": "Inicializar um repositório typescript com todas as configurações necessárias",
   "private": "true",
   "type": "module",
   "scripts": {
-    "test": "",
+    "test": "vitest --watch false",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "lint:all": "eslint src --ext .js,.ts --max-warnings=0 --fix",
@@ -18,16 +20,22 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^17.8.0",
-    "@commitlint/config-conventional": "^17.8.0",
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
     "@tsconfig/strictest": "^2.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
+    "@types/node": "^20.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "@vitest/coverage-v8": "^0.34.6",
     "cross-env": "^7.0.3",
-    "eslint": "^8.51.0",
+    "eslint": "^8.54.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "tsx": "^3.13.0",
-    "typescript": "^5.2.2"
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.1.4",
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
   }
 }
