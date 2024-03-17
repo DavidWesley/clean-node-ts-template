@@ -6,22 +6,22 @@ export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
     watch: true,
-    includeSource: ["test"],
-    include: ["./**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    include: ["./test/units/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     watchExclude: [...configDefaults.watchExclude],
     globals: false,
-    threads: true,
     root: "./",
-    testTimeout: 1 * 60 * 1000, // 1 minutes
+    testTimeout: 1 * 60 * 1000, // 1 minute
     passWithNoTests: false,
     environment: builtinEnvironments.node.name,
     exclude: [...configDefaults.exclude],
     coverage: {
       all: false,
-      exclude: configDefaults.coverage.exclude,
       provider: "v8",
+      exclude: configDefaults.coverage.exclude!,
       reporter: ["text", "html-spa"],
-      reportsDirectory: "./test/coverage"
-    }
+      reportsDirectory: "./test/coverage",
+      clean: true,
+    },
+    clearMocks: true,
   }
 })

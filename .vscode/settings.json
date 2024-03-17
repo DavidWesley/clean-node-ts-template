@@ -1,10 +1,25 @@
 {
 	"cSpell.enableFiletypes": [
 		"!json",
-		"js"
+		"ts",
 	],
 	"cSpell.words": [
-		"Beecrowd"
+		"express",
+		"tsup",
+		"github"
 	],
+	"editor.formatOnSave": true,
+	"typescript.suggest.autoImports": true,
+
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "always",
+		"source.organizeImports": "explicit",
+		"source.fixAll": "explicit"
+	},
 	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.referencesCodeLens.enabled": true
 }
