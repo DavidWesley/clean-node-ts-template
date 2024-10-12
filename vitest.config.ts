@@ -7,13 +7,12 @@ export default defineConfig({
   test: {
     watch: true,
     include: ["./test/units/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    watchExclude: [...configDefaults.watchExclude],
     globals: false,
     root: "./",
     testTimeout: 1 * 60 * 1000, // 1 minute
     passWithNoTests: false,
     environment: builtinEnvironments.node.name,
-    exclude: [...configDefaults.exclude],
+    exclude: configDefaults.exclude,
     coverage: {
       all: false,
       provider: "v8",
@@ -23,5 +22,10 @@ export default defineConfig({
       clean: true,
     },
     clearMocks: true,
+  },
+  server: {
+    watch: {
+      ignored: configDefaults.exclude
+    }
   }
 })

@@ -6,7 +6,8 @@
 	"cSpell.words": [
 		"express",
 		"tsup",
-		"github"
+		"github",
+		"commitlint"
 	],
 	"editor.formatOnSave": true,
 	"typescript.suggest.autoImports": true,

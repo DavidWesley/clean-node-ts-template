@@ -7,7 +7,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=20.11.0"
+    "node": ">=20.18.0"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=production node dist/main.js",
@@ -26,20 +26,20 @@
     "url": "https://github.com/DavidWesley"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.1",
-    "@commitlint/cli": "^19.2.0",
-    "@commitlint/config-conventional": "^19.1.0",
-    "@tsconfig/node-lts": "^20.1.1",
-    "@tsconfig/strictest": "^2.0.3",
-    "@types/node": "^20.11.28",
-    "@vitest/coverage-v8": "^1.4.0",
+    "@biomejs/biome": "1.9.3",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@tsconfig/node-lts": "^20.1.3",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^22.7.5",
+    "@vitest/coverage-v8": "^2.1.2",
     "cross-env": "^7.0.3",
     "husky": "^9.1.6",
-    "lint-staged": "^15.2.2",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.1",
-    "typescript": "^5.4.2",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^1.4.0"
+    "lint-staged": "^15.2.10",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.1.2"
   }
 }
