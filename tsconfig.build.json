@@ -1,8 +1,8 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
-        "target": "ES2022",
-        "lib": [ "ES2022" ],
+        "target": "ESNext",
+        "lib": [ "ESNext" ],
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
         "allowJs": true,
@@ -13,7 +13,7 @@
         "outDir": "dist",
         "paths": {
             "@/*": [ "./src/*" ]
-        }
+        },
     },
     "include": [ "src" ],
     "exclude": [ "node_modules/*", "dist/*" ]
